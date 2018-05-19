@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	background: url(../images/02.jpg);
+	}
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+nav {
+	background-color: #174860;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #861A18;
+	font-size: 1.5em;
+}
+nav i {
+	margin: 0 20px;
+}
+	
