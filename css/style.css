@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:700');
 body {
 	margin: 0;
 	background: url(../images/bg.jpg);
-	}
-* {
-	box-sizing: border-box;
+}
+
+header {
+	margin-top: 50px;
 }
 
 .container {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1200px;
+	padding: 0;
 }
 
 nav {
@@ -18,23 +21,81 @@ nav {
 
 .navbar {
 	background-color: white;
-	border-radius: 0 0 25px 25px;
+	border-radius: 25px 25px 0 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
 	color: #861A18;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
+
 nav i {
 	margin: 0 20px;
 }
 
+nav i:hover {
+	color: black;
+}
+
 nav a {
+	font-family: 'Cinzel Decorative', cursive;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .carousel {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+/* contact page */
+
+main {
+	background-color: #f1f1f1;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	border-radius: 0 0 25px 25px;
+}
+
+h4 {
+	text-align: center;
+}
+
+.col-md-3,
+.col-md-5,
+.col-md-8 {
+	display: inline-block;
+}
+
+.col-md-3,
+.col-md-5 {
+	text-align: center;
+}
+
+.col-md-5 p {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.btn {
+	position: relative;
+}
+
+.btn,
+.btn:active {
+	background-color: #861A18;
+	border-color: black;
+}
+
+.btn:hover {
+	background-color: black;
+	border-color: white;
+}
+
+@media (max-width: 768px) {
+	main iframe {
+		margin-bottom: 15px;
+	}
 }
