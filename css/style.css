@@ -51,7 +51,7 @@ nav a {
 
 /* contact page */
 
-main {
+main, #restaurant {
 	background-color: #f1f1f1;
 	width: 100%;
 	max-width: 1200px;
@@ -112,6 +112,34 @@ footer p {
 	padding: 10.5px;
 	margin: 0px;
 	line-height: 100%;
+}
+
+/* RESTAURANT*/
+
+#restaurant .row {
+	margin: 0;
+	height: 300px;
+}
+
+#restaurant h1 {
+	text-align: center;
+}
+
+.foto {
+	background-size: cover;
+}
+
+.foto1 {
+	background-image: url("../images/restaurant/1.jpg");
+}
+
+#foodmenu.row {
+	margin: 0;
+	height: 1100px;
+}
+
+#foodmenu .col {
+	
 }
 
 @media (max-width: 768px) {
