@@ -128,16 +128,6 @@
 }
 
 /* No JS */
-.no-js .bb-bookblock, 
-.no-js ul.bb-custom-grid li {
-	width: auto;
-	height: auto;
-}
-
-.no-js .bb-item {
-	display: block;
-	position: relative;
-}
 
 .bb-custom-wrapper {
 	width: 100%;
@@ -162,10 +152,6 @@
 	border: 1px solid black;
 }
 
-.bb-custom-side h3 {
-
-}
-
 .bb-custom-wrapper h3 {
 	font-size: 1.4em;
 	font-weight: 500;
@@ -180,50 +166,10 @@
 	text-align: center;
 }
 
-.bb-custom-wrapper > .foodmenu_control a {
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	border-radius: 2px;
-	background: #1baede;
-	color: #fff;
-	font-size: 0;
-	margin: 2px;
-}
-
-.bb-custom-wrapper > .foodmenu_control a:hover {
-	opacity: 0.6;
-}
-
-.bb-custom-icon:before {
-	font-family: 'arrows';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	font-size: 30px;
-	line-height: 40px;
-	display: block;
-	-webkit-font-smoothing: antialiased;
-}
-
-
-.bb-custom-icon-arrow-left:before,
-.bb-custom-icon-first:before {
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-
-/* No JS */
-.no-js .bb-custom-wrapper {
-	height: auto;
-}
-
-.no-js .bb-custom-content {
-	height: 470px;
+.foodmenu_control button {
+	background-color: #861A18;
+	color: white;
+	border: 1px solid black;
 }
 
 @media screen and (max-width: 46.0625em) {
