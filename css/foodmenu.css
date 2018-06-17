@@ -190,3 +190,24 @@
 	}
 }
 
+@media (max-width: 767px) {
+	
+	
+	.bb-custom-wrapper {
+		height: 60%;
+	}
+	
+	.bb-custom-side h1 {
+		font-size: 1em;
+	}
+	
+	.bb-custom-side h3 {
+		font-size: 1em;
+	}
+	
+	.bb-custom-side p {
+		font-size: 10px;
+		margin-bottom: 0;
+	}
+}
+

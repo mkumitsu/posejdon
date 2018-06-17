@@ -45,27 +45,153 @@ nav a {
 
 /* index page */
 
-.widget {
+.circular-menu {
   position: fixed;
-  width: 200px; 
-  left: -200px;
-  height: 150px;
-  width: 150px;
-  transition: left 0.4s ease-in-out;
-  -o-transition: left 0.4s ease-in-out;
-  -ms-transition: left 0.4s ease-in-out;
-  -moz-transition: left 0.4s ease-in-out;
-  -webkit-transition: left 0.4s ease-in-out;
+  top: 2em;
+  right: 2em;
 }
-.checkWeather {
+
+.circular-menu .floating-btn {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background-color: hsl(4, 98%, 60%);
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  line-height: 3.9;
+  cursor: pointer;
+  outline: 0;
+}
+
+.circular-menu.active .floating-btn {
+  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+}
+
+.circular-menu .floating-btn:active {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+}
+
+.circular-menu .floating-btn i {
+  font-size: 1.3em;
+  transition: transform .2s;  
+}
+
+.circular-menu.active .floating-btn i {
+  transform: rotate(45deg);
+}
+
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
   position: absolute;
-  left: 200px;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-color: white;
+  transition: all .3s ease;
 }
+
+.circular-menu.active:after {
+  transform: scale3d(5.5, 5.5, 1);
+  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+}
+
+.circular-menu .items-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.circular-menu .menu-item {
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  z-index: -1;
+  display: block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3;
+  background-color: hsla(0,0%,0%,.1);
+  transition: transform .3s ease, background .2s ease;
+}
+
+.circular-menu .menu-item:hover {
+  background-color: hsla(0,0%,0%,.3);
+}
+
+.circular-menu.active .menu-item {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.circular-menu.active .menu-item:nth-child(1) {
+  transform: translate3d(-6em,0em,0);
+}
+
+.circular-menu.active .menu-item:nth-child(2) {
+  transform: translate3d(-4.5em,4.5em,0);
+}
+
+.circular-menu.active .menu-item:nth-child(3) {
+  transform: translate3d(0em, 6em,0);
+}
+
+.english, .german, .russian {
+	border: 1px solid black;
+}
+
+.polish {
+	background: url(../images/flags/pl.svg);
+	background-size: cover;
+}
+
+.english {
+	background: url(../images/flags/gb.svg);
+	background-size: cover;
+}
+
+.german {
+	background: url(../images/flags/de.svg);
+	background-size: cover;
+}
+
+.russian {
+	background: url(../images/flags/ru.svg);
+	background-size: cover;
+}
+
+.widget {
+	position: fixed;
+	width: 200px;
+	left: -200px;
+	height: 150px;
+	width: 150px;
+	transition: left 0.4s ease-in-out;
+	-o-transition: left 0.4s ease-in-out;
+	-ms-transition: left 0.4s ease-in-out;
+	-moz-transition: left 0.4s ease-in-out;
+	-webkit-transition: left 0.4s ease-in-out;
+}
+
+.checkWeather {
+	position: absolute;
+	left: 200px;
+}
+
 .widgetInner {
-  width: 200px;
+	width: 200px;
 }
+
 .widget:hover {
-  left: 0px;
+	left: 0px;
 }
 
 .carousel {
@@ -84,7 +210,7 @@ nav a {
 	height: 150px;
 	border: 1px solid white;
 	border-radius: 50%;
-    background-color: white;
+	background-color: white;
 	text-align: center;
 	color: black;
 }
@@ -99,7 +225,8 @@ nav a {
 
 /* contact page */
 
-main, #restaurant {
+main,
+#restaurant {
 	background-color: #f1f1f1;
 	width: 100%;
 	max-width: 1200px;
@@ -148,7 +275,8 @@ h4 {
 footer {
 	width: 100%;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: auto;
+	margin-bottom: 50px;
 	background-color: white;
 	height: 35px;
 	text-align: center;
@@ -159,39 +287,211 @@ footer {
 footer p {
 	padding: 10.5px;
 	margin: 0px;
-	line-height: 100%;
+	line-height: 10px;
+	text-align: center;
 }
 
 /* RESTAURANT*/
 
-#restaurant .row {
-	margin: 0;
+#restaurant {
+	height: 1320px;
+}
+
+.intro {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.row img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 650px;
 	height: 300px;
 }
 
-#restaurant h1 {
+#restaurant .row {
+	margin: 0;
+}
+
+#restaurant h1,h3 {
+	
 	text-align: center;
 }
 
-.foto {
-	background-size: cover;
+#restaurant p {
+	
 }
 
-.foto1 {
-	background-image: url("../images/restaurant/1.jpg");
+#foodmenu h3, #foodmenu p {
+	text-align: left;
 }
 
 #foodmenu.row {
 	margin: 0;
-	height: 1100px;
+	height: 1100px; /*860*/	
 }
 
-.col>h3 {
+/* GALLERY */
+
+.gallery h2 {
 	text-align: center;
 }
 
-@media (max-width: 768px) {
+.thumb {
+	margin-bottom: 20px;
+}
+
+img.zoom {
+	display: block;
+	width: 250px;
+	height: 200px;
+	margin-left: auto;
+    margin-right: auto;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+}
+
+.transition {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/*ADDITIONAL*/
+
+.attractions .container {
+	background-color: #f1f1f1;
+}
+
+.attractions .row {
+	margin: 0 1rem;
+}
+
+.attractions .col {
+	margin: 20px auto;
+}
+
+.attractions h1 {
+	text-align: center;
+}
+
+.attractions img {
+	width: 250px;
+	height: 150px;
+}
+
+#map {
+	width: 1000px;
+	height: 400px;
+	margin: 20px auto;
+	}
+
+/* ROOMS */
+
+.rooms .container {
+	background-color: #f1f1f1;
+}
+
+.rooms .nav-link {
+	color: #861A18;		
+}
+
+.rooms button {
+	margin: 10px 20px;
+	width: 150px;
+	
+}
+
+.rooms .check_button {
+	width: auto;
+	margin: 0 auto;
+}
+
+[id*="room_"] {
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.roompic {
+	margin: 10px;
+}
+
+.availability {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0;
+}
+
+[id*="check_button"] {
+	display: none;
+	margin: 0 auto;
+	margin-bottom: 20px;	
+}
+
+.modal-dialog {
+	max-width: 750px;
+}
+
+/* RWD */
+
+@media (max-width: 767px) {
 	main iframe {
 		margin-bottom: 15px;
 	}
+	
+	header i.fa-5x {
+		font-size: 3em;
+	}
+	
+	footer p {
+		padding: 0;
+		font-size: 11px;
+		line-height: 3em;
+		
+	}
+	
+	/* CONTACT */
+	.btn {
+		margin-bottom: 30px;
+	}
+	
+	/* ADDITIONAL */
+	
+	.attractions img {
+		margin: auto;
+	}
+	
+	/* ROOMS */
+	
+	.rooms button {
+		width: auto;
+	}
+	
+	/* RESTAURANT */
+	
+	.col-7 img {
+			width: 100px;
+	}
+	
+	#restaurant {
+		height: 1270px;
+	}
+	
+	#restaurant>h1 {
+		font-size: 1,5rem;
+	}
+	
+	.fa-3x {
+		font-size: 2em;
+	}
+	
+	.col>h3 {
+		font-size: 1,5rem;
+	}	
 }

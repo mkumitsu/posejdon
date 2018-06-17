@@ -5,7 +5,7 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="images/favicon.ico" rel="icon" type="image/x-icon">
-	<title>Pensjonat i Restauracja Posejdon - Strona Główna</title>
+	<title>Pensjonat i Restauracja Posejdon - Atrakcje</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 	<link href="slick/slick.css" rel="stylesheet">
@@ -13,12 +13,6 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="circular-menu" id="circularMenu">
-		<a class="floating-btn polish" onclick="document.getElementById('circularMenu').classList.toggle('active');"></a>
-		<menu class="items-wrapper">
-			<a class="menu-item english" href="#" title="ENGLISH"></a> <a class="menu-item german" href="#" title="GERMAN"></a> <a class="menu-item russian" href="#" title="RUSSIAN"></a>
-		</menu>
-	</div>
 	<header>
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
@@ -32,7 +26,7 @@
 							<a class="nav-link" href="restaurant.html" title="Restauracja"><i class="fas fa-utensils fa-5x"></i>Restauracja</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="additional.html" title="Dodatkowe atrakcje"><i class="fas fa-child fa-5x"></i>Atrakcje</a>
+							<a class="nav-link" href="additional.html" title="Dodatkowe atrakcje"><i class="fas fa-child fa-5x" style="color: black"></i>Atrakcje</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="gallery.html" title="Galeria"><i class="fas fa-images fa-5x"></i>Galeria</a>
@@ -45,46 +39,42 @@
 			</nav>
 		</div>
 	</header>
-	<section>
-		<div class="widget">
-			<div class="checkWeather"><img alt="Sprawdź pogodę" src="images/weather.png"></div>
-			<div class="widgetInner">
-				<a class="aw-widget-legal" href="https://www.accuweather.com/en/pl/grzybowo/2668940/weather-forecast/2668940"></a>
-				<div class="aw-widget-current" data-language="pl" data-locationkey="2668940" data-uid="awcc1527858875237" data-unit="c" data-useip="false" id="awcc1527858875237"></div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="carousel">
-				<div><img alt="" src="images/carousel/1.jpg"></div>
-				<div><img alt="" src="images/carousel/2.jpg"></div>
-				<div><img alt="" src="images/carousel/3.jpg"></div>
-				<div><img alt="" src="images/carousel/4.jpg"></div>
-			</div>
-		</div>
-	</section>
-	<section class="assets">
+	<section class="attractions">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<div class="asset">
-						<h1>60</h1>
-						<p>metrów od plaży</p>
-					</div>
+				<div class="col">
+					<h2>Teren rekreacyjny do dyspozycji gości:</h2>
+					<ul>
+						<li>Stół bilardowy znajdujący się na parterze pensjonatu</li>
+						<li>altanka, meble i parasole ogrodowe</li>
+						<li>grill, ognisko</li>
+						<li>dla miłośników sportów wodnych przejażdżki bananem</li>
+						<li>200m od obiektu znajduje się boisko do piłki nożnej i plac zabaw dla dzieci</li>
+					</ul>
 				</div>
-				<div class="col-sm-4">
-					<div class="asset">
-						<h1>33</h1>
-						<p>miejsca noclegowe</p>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="asset">
-						<h1>12</h1>
-						<p>miesięcy w roku</p>
+				<div class="col">
+					<div class="row">
+					<img src="images/additional/rowery.jpg">
+					<img src="images/additional/plac_zabaw.jpg">
+					<img src="images/additional/banan.jpg">
+					<img src="images/additional/ognisko.jpg">
 					</div>
 				</div>
 			</div>
+			<div class="row">
+			<h2>Grzybowo</h2>
+			<p>Grzybowo to mała miejscowość letniskowa położona w bezpośrednim sąsiedztwie morza. Znajdziecie Państwo tutaj lokale gastronomiczne, dobrze zaopatrzone sklepy oraz pocztę. W pobliżu Grzybowa znajdują się korty tenisowe, baseny kryte i odkryte, fitness kluby, wesołe miasteczka, dyskoteki, wypożyczalnie sprzętu wodnego. Znużonym plażowaniem turystom rejon Grzybowa proponuje wiele możliwości aktywnego spędzania czasu. Są to między innymi:</p>
+			<ul>
+				<li>Wycieczki na rowerach, motorowerach i czterokołowcach (znajdują się w wypożyczalniach)</li>
+				<li>Wycieczki promem z Kołobrzegu na Bornholm (rejsy od kwietnia do października)</li>
+				<li>Zwiedzanie Kołobrzegu oraz innych ciekawych miejsc rejonu Pomorza Zachodniego.</li>
+				<li>Boisko do piłki nożnej, plac zabaw.</li>
+				<li>Ścieżka rowerowa – trasa: Ustronie Morskie – Kołobrzeg – Grzybowo – Dźwirzyno</li>
+			</ul>
+			<div id="map"></div>
+			</div>			
 		</div>
+		
 	</section>
 	<footer>
 		<p>© 2018 <a href="#">Kumitsu Entertainment Systems</a>, Wszelkie prawa zastrzeżone.</p>
@@ -94,12 +84,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
 	</script> 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
-	</script> 
-	<script src="slick/slick.js">
-	</script> 
-	<script src="https://oap.accuweather.com/launch.js">
-	</script> 
-	<script src="js/script.js">
 	</script>
+	<script src="https://maps.google.com/maps/api/js?sensor=false&amp;language=pl"></script>
+	<script src="js/gmap3.min.js"></script>
+	<script src="js/map.js"></script>
 </body>
 </html>
