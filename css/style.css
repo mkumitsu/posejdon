@@ -208,7 +208,7 @@ nav a {
 	margin: 0 auto;
 	width: 150px;
 	height: 150px;
-	border: 1px solid white;
+	border: 5px inset red;
 	border-radius: 50%;
 	background-color: white;
 	text-align: center;
@@ -223,6 +223,26 @@ nav a {
 	font-size: 12px;
 }
 
+
+.intro .container {
+	background-color: #f1f1f1;
+}
+
+.intro .col-lg-6 {
+	margin: 1em 0;
+}
+
+.intro p {
+	margin-left: 1em;
+}
+
+.intro h2, h1 {
+	text-align: center;
+}
+
+.intro .row img {
+	width: auto;
+}
 /* contact page */
 
 main,
@@ -294,7 +314,7 @@ footer p {
 /* RESTAURANT*/
 
 #restaurant {
-	height: 1320px;
+	
 }
 
 .intro {
@@ -329,7 +349,11 @@ footer p {
 
 #foodmenu.row {
 	margin: 0;
-	height: 1100px; /*860*/	
+}
+
+#foodmenu .col {
+	height: 900px;
+	z-index: 1;
 }
 
 /* GALLERY */
@@ -438,9 +462,68 @@ img.zoom {
 	max-width: 750px;
 }
 
+.modal-header h3 {
+	color: #861A18;
+}
+
+.fc-time {
+	visibility: hidden;
+}
+
+.fc-content {
+	background-color: red;
+	line-height: 5em;
+}
+
+.fc-title {
+	display: none;
+}
+
 /* RWD */
 
 @media (max-width: 767px) {
+	
+	
+	.slick-arrow {
+		display: none;
+	}
+	
+	.widget, .circular-menu {
+		display: none;
+	}
+	
+	.assets {
+		margin: 0;
+	}
+	
+	.asset {
+		margin-bottom: 2em;
+		width: 100px;
+		height: 100px;
+		font-size: 0.5rem;
+	}
+	
+	.asset p {
+		font-size: 1em;
+	}
+	
+	.intro {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.intro h2 {
+		font-size: 1.5em;
+	}
+	
+	.intro p {
+		margin-right: 1em;
+	}
+	
+	.intro img {
+		max-width: 350px;
+	}
+	
 	main iframe {
 		margin-bottom: 15px;
 	}
@@ -467,6 +550,10 @@ img.zoom {
 		margin: auto;
 	}
 	
+	.attractions h2 {
+	font-size: 1.5rem;
+	}
+	
 	/* ROOMS */
 	
 	.rooms button {
@@ -475,17 +562,40 @@ img.zoom {
 	
 	/* RESTAURANT */
 	
+	.restaurant-header h1 {
+		font-size: 2em;
+	}
+	
+	.restaurant-header h3 {
+		font-size: 1em;
+	}
+	
+	.restaurant-header img {
+		width: 300px;
+		height: auto;
+	}
+	
+	.col p {
+		text-align: center;
+	}
+	
 	.col-7 img {
 			width: 100px;
+			height: auto;
 	}
 	
 	#restaurant {
-		height: 1270px;
+		height: 1250px;
 	}
 	
 	#restaurant>h1 {
 		font-size: 1,5rem;
 	}
+	
+/*#foodmenu .col {
+	height: 900px;
+	z-index: 1;
+}*/
 	
 	.fa-3x {
 		font-size: 2em;
@@ -493,5 +603,11 @@ img.zoom {
 	
 	.col>h3 {
 		font-size: 1,5rem;
-	}	
+	}
+	
+	/* GALLERY */
+	
+	.gallery h2 {
+		font-size: 1.5rem;
+	}
 }
