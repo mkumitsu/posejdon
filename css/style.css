@@ -385,6 +385,12 @@ img.zoom {
 	transform: scale(1.2);
 }
 
+.tour {
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;
+}
+
 /*ADDITIONAL*/
 
 .attractions .container {
