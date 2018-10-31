@@ -7,6 +7,14 @@ $(document).ready(function() {
         $(".room").css('display', 'none');
         $("#room_2").css('display', 'flex');
     });
+	$("#btn_r_3").click(function() {
+        $(".room").css('display', 'none');
+        $("#room_3").css('display', 'flex');
+    });
+	$("#btn_r_4").click(function() {
+        $(".room").css('display', 'none');
+        $("#room_4").css('display', 'flex');
+    });
     $("#btn_r_5").click(function() {
         $(".room").css('display', 'none');
         $("#room_5").css('display', 'flex');
