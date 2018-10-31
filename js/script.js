@@ -1,8 +1,21 @@
-// carousel
+// carousel on index page
 $(document).ready(function() {
     $('.carousel').slick({
         dots: true,
         arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnFocus: true,
+        speed: 1000
+    });
+});
+
+
+// carousel on restaurant page
+$(document).ready(function() {
+    $('.carousel2').slick({
+        dots: false,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnFocus: true,

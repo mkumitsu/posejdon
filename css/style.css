@@ -133,19 +133,7 @@ nav a {
 }
 
 .circular-menu.active .menu-item:nth-child(1) {
-  transform: translate3d(-6em,0em,0);
-}
-
-.circular-menu.active .menu-item:nth-child(2) {
-  transform: translate3d(-4.5em,4.5em,0);
-}
-
-.circular-menu.active .menu-item:nth-child(3) {
-  transform: translate3d(0em, 6em,0);
-}
-
-.english, .german, .russian {
-	border: 1px solid black;
+  transform: translate3d(0em,6em,0);
 }
 
 .polish {
@@ -153,19 +141,10 @@ nav a {
 	background-size: cover;
 }
 
-.english {
-	background: url(../images/flags/gb.svg);
-	background-size: cover;
-}
-
 .german {
 	background: url(../images/flags/de.svg);
 	background-size: cover;
-}
-
-.russian {
-	background: url(../images/flags/ru.svg);
-	background-size: cover;
+	border: 1px solid black;
 }
 
 .widget {
@@ -194,7 +173,7 @@ nav a {
 	left: 0px;
 }
 
-.carousel {
+.carousel, .carousel2 {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
