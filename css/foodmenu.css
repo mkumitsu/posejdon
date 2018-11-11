@@ -152,6 +152,14 @@
 	border: 1px solid black;
 }
 
+.bb-custom-side h3 {
+	margin-bottom: 0;
+}
+
+.bb-custom-side p {
+	margin: 0;
+}
+
 .bb-custom-wrapper h3 {
 	font-size: 1.4em;
 	font-weight: 500;
