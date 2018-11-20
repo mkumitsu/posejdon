@@ -92,10 +92,8 @@ $('a').click(function (e) {
     }, 500);                             // time in ms
 }); 
 
-/*$(".hover").mouseleave(
+$(".hover").mouseleave(
   function () {
     $(this).removeClass("hover");
   }
 );
-
-*/
