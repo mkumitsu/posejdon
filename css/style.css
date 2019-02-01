@@ -566,6 +566,20 @@ img.zoom {
 	height: 100%;
 }
 
+.booking p {
+	display: inline;
+	font-size: 30px;
+	text-align: center;
+	margin-left: 25%;
+}
+
+.booking>a>img {
+	display: inline;
+	width: 150px;
+	height: 61px;
+	
+}
+
 [id*="room_"] {
 	display: none;
 }
